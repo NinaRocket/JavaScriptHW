@@ -43,7 +43,7 @@ function writePassword() {
   }
 
   //series of prompts asking the user what character types they need
-  var usChar = prompt("Please enter s if you need a special characters for your password, press enter to continue.");
+  var usChar = prompt("Please enter s if you need a special character for your password, press enter to continue.");
 
   if (usChar === "s") {
 
