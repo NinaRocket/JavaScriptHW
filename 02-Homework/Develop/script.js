@@ -75,10 +75,13 @@ var finalPW = password1.split("");
 
 Array.prototype.splice.apply(finalPW, [0, criteriaArray.length].concat(criteriaArray));
 
+var genPW = finalPW.join("");
+
 
 console.log(password1);
 console.log(pw);
 console.log(finalPW);
+console.log(genPW);
 
 
 // Add event listener to generate button
