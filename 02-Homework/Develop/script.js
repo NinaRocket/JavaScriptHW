@@ -22,7 +22,7 @@ function writePassword() {
   //string variable to hold initial password criteria
   var pw = "";
 
-  //var generate = true;
+
 
   //array to hold randomly generated characters the user needs
   var criteriaArray = [];
@@ -34,11 +34,12 @@ function writePassword() {
   var pwLength = prompt("How many characters long does your password need to be? Please choose between 8 and 128 characters.")
 
   //conditional statement if input is out of range
-  if (pwLength < 8 || pwLength > 128) {
+  while (pwLength < 8 || pwLength > 128) {
 
 
     alert("Your password must be between 8 and 128 characters");
-    //generate === false;
+    var pwLength = prompt("How many characters long does your password need to be? Please choose between 8 and 128 characters.")
+
   }
 
   //series of prompts asking the user what character types they need
@@ -95,9 +96,9 @@ function writePassword() {
   console.log(pw);
   console.log(finalPW);
   console.log(genPW);
-
-
 }
+
+
 generateBtn.addEventListener("click", writePassword);
 // //string variables to hold each criteria type
 // var userLowerCase = 'abcdefghijklmnopqrstuvwxyz';
