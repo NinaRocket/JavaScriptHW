@@ -2,7 +2,6 @@
 var generateBtn = document.querySelector("#generate");
 //var generatePassword = document.querySelector("#password");
 
-
 // Write password to the #password input
 function writePassword() {
   //var password = generatePassword();
@@ -21,8 +20,6 @@ function writePassword() {
 
   //string variable to hold initial password criteria
   var pw = "";
-
-
 
   //array to hold randomly generated characters the user needs
   var criteriaArray = [];
@@ -89,7 +86,7 @@ function writePassword() {
   var genPW = finalPW.join("");
 
 
-  //passwordText.value = password;
+  //displays the password in the textfield
   passwordText.value = genPW;
 
   console.log(password1);
