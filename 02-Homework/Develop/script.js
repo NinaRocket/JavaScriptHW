@@ -9,23 +9,33 @@ function writePassword() {
   passwordText.value = password;
 
 }
+//string variables to hold each criteria type
 var userLowerCase = 'abcdefghijklmnopqrstuvwxyz';
 var userUpperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXY'
 var userNumeric = '0123456789';
 var userSpecial = '!@#$%&*';
 
+//string variables for user input
 var l = userLowerCase;
 var s = userSpecial;
 var n = userNumeric;
 var u = userUpperCase;
 
+//string variable to hold initial password criteria
 var pw = "";
-var generate = true;
+
+//var generate = true;
+
+//array to hold randomly generated characters the user needs
 var criteriaArray = [];
+
+//array to hold generated password
 var password1 = [];
 
+//initial prompt to ask the length of the password
 var pwLength = prompt("How many characters long does your password need to be? Please choose between 8 and 128 characters.")
 
+//conditional statement if input is out of range
 if (pwLength < 8 || pwLength > 128) {
 
 
@@ -33,7 +43,7 @@ if (pwLength < 8 || pwLength > 128) {
   //generate === false;
 }
 
-
+//series of prompts asking the user what character types they need
 var usChar = prompt("Please enter s if you need a special characters for your password, press enter to continue.");
 
 if (usChar === "s") {
@@ -64,17 +74,19 @@ if (usChar === "n") {
   console.log(criteriaArray);
 }
 
-
+//for loop that generates a password into the array password1
 for (i = 0; i < pwLength; i++) {
   password1 += pw.charAt([Math.floor(Math.random() * pw.length)]);
 
 }
 
+//turning the password string into an array called finalPW
 var finalPW = password1.split("");
 
-
+//places criteria from the criteriaArray into the final password array
 Array.prototype.splice.apply(finalPW, [0, criteriaArray.length].concat(criteriaArray));
 
+//the final password array is then put into a single string
 var genPW = finalPW.join("");
 
 
