@@ -1,11 +1,11 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-//var password = document.querySelector("#password");
+//var generatePassword = document.querySelector("#password");
 
-generateBtn.addEventListener("click", writePassword);
+
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  //var password = generatePassword();
   var passwordText = document.querySelector("#password");
   //string variables to hold each criteria type
   var userLowerCase = 'abcdefghijklmnopqrstuvwxyz';
@@ -97,6 +97,7 @@ function writePassword() {
 
 
 }
+generateBtn.addEventListener("click", writePassword);
 // //string variables to hold each criteria type
 // var userLowerCase = 'abcdefghijklmnopqrstuvwxyz';
 // var userUpperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXY'
