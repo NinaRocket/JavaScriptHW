@@ -88,7 +88,8 @@ function writePassword() {
   var genPW = finalPW.join("");
 
 
-  passwordText.value = password;
+  //passwordText.value = password;
+  passwordText.value = genPW;
 
   console.log(password1);
   console.log(pw);
